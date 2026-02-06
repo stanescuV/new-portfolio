@@ -254,7 +254,7 @@ img {
 }
 
 .about-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -294,7 +294,7 @@ img {
 }
 
 .expertise-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -552,7 +552,7 @@ img {
 }
 
 .testimonials-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
