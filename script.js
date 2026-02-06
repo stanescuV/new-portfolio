@@ -1,11 +1,17 @@
 // Portfolio Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Hero typewriter animation
+    initTypewriter();
+
     // Smooth scrolling for navigation links
     initSmoothScroll();
 
     // Project carousel functionality
     initCarousel();
+
+    // Testimonials carousel functionality
+    initTestimonialsCarousel();
 
     // Header scroll effect
     initHeaderScroll();
@@ -16,6 +22,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Tech badges infinite scroll pause on hover
     initTechBadgesHover();
 });
+
+// Typewriter effect for hero name
+function initTypewriter() {
+    const heroName = document.getElementById('hero-name');
+    if (!heroName) return;
+
+    const fullText = 'VICTOR\nSTANESCU';
+    let charIndex = 0;
+    const typingSpeed = 100;
+
+    function type() {
+        if (charIndex < fullText.length) {
+            const char = fullText.charAt(charIndex);
+            if (char === '\n') {
+                heroName.innerHTML += '<br>';
+            } else {
+                heroName.innerHTML += char;
+            }
+            charIndex++;
+            setTimeout(type, typingSpeed);
+        }
+    }
+
+    setTimeout(type, 500);
+}
 
 // Smooth scrolling for anchor links
 function initSmoothScroll() {
@@ -94,6 +125,95 @@ function initCarousel() {
     updateButtonStates();
 
     // Optional: Enable drag scrolling
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        carousel.style.cursor = 'grabbing';
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+    });
+
+    carousel.addEventListener('mouseup', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    // Set initial cursor style
+    carousel.style.cursor = 'grab';
+}
+
+// Testimonials carousel
+function initTestimonialsCarousel() {
+    const carousel = document.querySelector('.testimonials-carousel');
+    const prevBtn = document.querySelector('.testimonial-btn.prev');
+    const nextBtn = document.querySelector('.testimonial-btn.next');
+
+    if (!carousel || !prevBtn || !nextBtn) return;
+
+    const cards = carousel.querySelectorAll('.testimonial-card');
+    if (cards.length === 0) return;
+
+    // Get the width of one card including gap
+    function getScrollAmount() {
+        const card = cards[0];
+        const cardWidth = card.offsetWidth;
+        const gap = parseInt(window.getComputedStyle(carousel).gap) || 32;
+        return cardWidth + gap;
+    }
+
+    // Update button states based on scroll position
+    function updateButtonStates() {
+        const scrollLeft = carousel.scrollLeft;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+        prevBtn.style.opacity = scrollLeft <= 10 ? '0.5' : '1';
+        prevBtn.style.cursor = scrollLeft <= 10 ? 'default' : 'pointer';
+
+        nextBtn.style.opacity = scrollLeft >= maxScroll - 10 ? '0.5' : '1';
+        nextBtn.style.cursor = scrollLeft >= maxScroll - 10 ? 'default' : 'pointer';
+    }
+
+    // Scroll to previous card
+    prevBtn.addEventListener('click', () => {
+        const scrollAmount = getScrollAmount();
+        carousel.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    // Scroll to next card
+    nextBtn.addEventListener('click', () => {
+        const scrollAmount = getScrollAmount();
+        carousel.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    // Update button states on scroll
+    carousel.addEventListener('scroll', updateButtonStates);
+
+    // Initialize button states
+    updateButtonStates();
+
+    // Enable drag scrolling
     let isDown = false;
     let startX;
     let scrollLeft;
