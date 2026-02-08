@@ -9,15 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Deploy to VPS via SSH
-      uses: easingthemes/ssh-deploy@main
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        REMOTE_HOST: ${{ secrets.VPS_HOST }}
-        REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: /var/www/html/
-        SCRIPT_BEFORE: |
+    - name: Execute SSH commands on VPS
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
           cd /new-portfolio/
           git pull
           rm -rf /var/www/html/*
-        SOURCE: /new-portfolio/
+          cp -r . /var/www/html/
