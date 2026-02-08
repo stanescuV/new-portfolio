@@ -1,4 +1,5 @@
 name: Deploy to VPS
+
 on:
   push:
     branches: [ main ]
@@ -6,15 +7,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
-    - name: Deploy via SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
+    - name: Deploy to VPS via SSH
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.VPS_HOST }}
+        REMOTE_USER: ${{ secrets.VPS_USER }}
+        TARGET: /var/www/html/
+        SCRIPT_BEFORE: |
           cd /new-portfolio/
           git pull
           rm -rf /var/www/html/*
-          cp -r . /var/www/html/
+        SOURCE: /new-portfolio/
