@@ -21,6 +21,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
           cd /new-portfolio/
           git pull
-          rm -rf /var/www/html/*
-          cp -r . /var/www/html/
+          cp -r index.html styles.css script.js assets /var/www/html/
+          chown -R www-data:www-data /var/www/html/
+          chmod -R 755 /var/www/html/
         EOF
