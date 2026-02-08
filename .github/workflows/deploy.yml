@@ -19,9 +19,10 @@ jobs:
     - name: Deploy to VPS
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+          cd
           cd /new-portfolio/
           git pull
-          cd .. 
+          cd 
           cp new-portfolio /var/www/ -r
           cd /var/www/
           rm html -r 
