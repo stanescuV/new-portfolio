@@ -97,6 +97,41 @@ img {
     color: var(--primary-color);
 }
 
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: 1rem;
+    border-left: 1px solid rgba(255,255,255,0.15);
+    padding-left: 1rem;
+}
+
+.lang-switcher a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lang-switcher a img {
+    width: 26px;
+    height: 18px;
+    border-radius: 3px;
+    display: block;
+}
+
+.lang-switcher a:hover {
+    opacity: 1;
+    transform: scale(1.12);
+}
+
+.lang-switcher a.active {
+    opacity: 1;
+    cursor: default;
+    pointer-events: none;
+}
+
 .btn-contact {
     background: var(--primary-color);
     color: var(--dark-bg) !important;
