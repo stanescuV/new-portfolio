@@ -7,11 +7,14 @@
     <title>Portfolio Victor Stanescu</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="preload" href="assets/victor-stanescu-profil.webp" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//images.unsplash.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"></noscript>
 </head>
 
 <body>
@@ -45,7 +48,7 @@
         </div>
         <div class="hero-image">
             <div class="hero-image-wrapper">
-                <img src="assets/victor-stanescu-profil.png" alt="Victor Stanescu" class="profile-img">
+                <img src="assets/victor-stanescu-profil.webp" alt="Victor Stanescu" class="profile-img" fetchpriority="high">
                 <div class="hero-image-decoration"></div>
             </div>
         </div>
@@ -57,7 +60,7 @@
             <div class="about-images">
 
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop"
-                    alt="Developer" class="about-img-2">
+                    alt="Developer" class="about-img-2" loading="lazy" decoding="async" width="400" height="300">
             </div>
             <div class="about-content">
                 <span class="section-label">À propos</span>
@@ -173,40 +176,40 @@
                     </div>
                     <p class="stack-subtitle">Technologies maîtrisées au quotidien</p>
                     <div class="stack-cards">
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                                 alt="React"> React</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                                 alt="Node.js"> Node.js</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
                                 alt="Express"> Express</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                                 alt="JavaScript"> JavaScript</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                                 alt="TypeScript"> TypeScript</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                                 alt="PostgreSQL"> PostgreSQL</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                                 alt="Docker"> Docker</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
                                 alt="Python"> Python</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
                                 alt="Firebase"> Firebase</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
                                 alt="MongoDB"> MongoDB</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
                                 alt="Azure"> Azure</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
                                 alt="Scss"> Scss</div>
 
@@ -221,28 +224,28 @@
                     </div>
                     <p class="stack-subtitle">Technologies utilisées selon les projets</p>
                     <div class="stack-cards">
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
                                 alt="Java"> Java</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
                                 alt="Spring Boot"> Spring Boot</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
                                 alt="Angular"> Angular</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
                                 alt="Pandas"> Pandas</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
                                 alt="Jupyter Lab"> Jupyter Lab</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg"
                                 alt="Playwright"> Playwright</div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="AI"> AI
                         </div>
-                        <div class="stack-card"><img
+                        <div class="stack-card"><img loading="lazy" decoding="async"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"
                                 alt="DataBricks"> DataBricks</div>
                         <div class="stack-card"><svg class="stack-card-svg" xmlns="http://www.w3.org/2000/svg"
@@ -272,77 +275,77 @@
         <div class="tech-scroll">
             <div class="tech-badges">
                 <!-- First set -->
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                         alt="Node.js"> Node.js</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
                         alt="Python"> Python</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                         alt="TypeScript"> TypeScript</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                         alt="JavaScript"> JavaScript</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
                     React</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
                         alt="Angular"> Angular</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
                     Java</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
                         alt="Spring Boot"> Spring Boot</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                         alt="PostgreSQL"> PostgreSQL</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                         alt="Docker"> Docker</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Scss">
                     Scss</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
                         alt="GitLab"> GitLab</span>
                 <!-- Duplicate set for seamless loop -->
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
                         alt="Node.js"> Node.js</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
                         alt="Python"> Python</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                         alt="TypeScript"> TypeScript</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                         alt="JavaScript"> JavaScript</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
                     React</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
                         alt="Angular"> Angular</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
                     Java</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
                         alt="Spring Boot"> Spring Boot</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
                         alt="PostgreSQL"> PostgreSQL</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                         alt="Docker"> Docker</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Scss">
                     Scss</span>
-                <span class="tech-badge"><img
+                <span class="tech-badge"><img loading="lazy" decoding="async"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
                         alt="GitLab"> GitLab</span>
             </div>
@@ -376,7 +379,7 @@
             <div class="projects-carousel">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/belteleachat.png" alt="Belteleachat">
+                        <img src="assets/belteleachat.webp" alt="Belteleachat" loading="lazy" decoding="async">
                     </div>
                     <h3>Belteleachat</h3>
                     <p>Boutique avec plus de 10 000 clients et plusieurs millions de chiffre d’affaires.
@@ -387,7 +390,7 @@
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/hinaiti.png" alt="Hinaiti">
+                        <img src="assets/hinaiti.webp" alt="Hinaiti" loading="lazy" decoding="async">
                     </div>
                     <h3>Hinaiti</h3>
                     <p>J'ai développé l'intégralité du site, avant d'enrichir ses fonctionnalités et d'en assurer la
@@ -397,7 +400,7 @@
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
-                            alt="Dachser Legal Text">
+                            alt="Dachser Legal Text" loading="lazy" decoding="async" width="600" height="400">
                     </div>
                     <h3>Dachser Legal Text</h3>
                     <p>
@@ -424,7 +427,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/dachser-web-community.jpg" alt="Dachser Web Community">
+                        <img src="assets/dachser-web-community.webp" alt="Dachser Web Community" loading="lazy" decoding="async">
                     </div>
                     <h3>Dachser Web Community</h3>
                     <p>Une autre mission qui m'a été confiée consistait à travailler pour la Dachser Web Community, où
@@ -437,7 +440,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/archilan.png" alt="Archilan">
+                        <img src="assets/archilan.webp" alt="Archilan" loading="lazy" decoding="async">
                     </div>
                     <h3>Quiz Mashup pour l'événement Archilan</h3>
                     <p>Ayant déjà travaillé avec des applications en temps réel (via WebSocket), j'ai conçu pour
@@ -452,7 +455,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/ChatBot.png" alt="Chatbot">
+                        <img src="assets/ChatBot.webp" alt="Chatbot" loading="lazy" decoding="async">
                     </div>
                     <h3>Chatbot Avocat RAG</h3>
                     <p>Développement d'un RAG chatbot juridique avancé qui répond à toute question sur le droit pénal.
@@ -462,7 +465,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/croco.png" alt="Tag Direct">
+                        <img src="assets/croco.webp" alt="Tag Direct" loading="lazy" decoding="async">
                     </div>
                     <h3>WebApp Kahoot / Mentimeter</h3>
                     <p>Développement d'une webapp similaire à Kahoot / Mentimeter, utilisant WebSockets pour la
@@ -478,7 +481,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/tag-direct.png" alt="Tag Direct">
+                        <img src="assets/tag-direct.webp" alt="Tag Direct" loading="lazy" decoding="async">
                     </div>
                     <h3>Tag Direct</h3>
                     <p>J’ai mis en place un mécanisme permettant d’afficher des tarifs / produits différenciés. Les
@@ -541,7 +544,7 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-avatar">
-                        <img src="assets/jm-dyosis.png" alt="Client 4">
+                        <img src="assets/jm-dyosis.webp" alt="Client 4" loading="lazy" decoding="async">
                     </div>
                     <p class="testimonial-text">"Victor a développé et livré une application full-stack professionnelle
                         pour l’événement ArchiLan 2025, gérant plus de 30 connexions en temps réel. Son travail se
@@ -553,7 +556,7 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-avatar">
-                        <img src="assets/al_akkol.png" alt="Client 5">
+                        <img src="assets/al_akkol.webp" alt="Client 5" loading="lazy" decoding="async">
                     </div>
                     <p class="testimonial-text">"Victor has strong technical skills and consistently brings clarity and
                         a proactive attitude to technical discussions.
@@ -608,7 +611,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1.1" defer></script>
 </body>
 
 </html>

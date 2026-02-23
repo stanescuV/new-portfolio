@@ -118,11 +118,8 @@ function initCarousel() {
         });
     });
 
-    // Update button states on scroll
+    // Update button states on scroll (initial state set via CSS)
     carousel.addEventListener('scroll', updateButtonStates);
-
-    // Initialize button states
-    updateButtonStates();
 
     // Optional: Enable drag scrolling
     let isDown = false;
@@ -207,11 +204,8 @@ function initTestimonialsCarousel() {
         });
     });
 
-    // Update button states on scroll
+    // Update button states on scroll (initial state set via CSS)
     carousel.addEventListener('scroll', updateButtonStates);
-
-    // Initialize button states
-    updateButtonStates();
 
     // Enable drag scrolling
     let isDown = false;
@@ -277,15 +271,13 @@ function initHeaderScroll() {
 }
 
 // Scroll animations with Intersection Observer
+// Cards (.expertise-card, .project-card, .testimonial-card) are handled by CSS animations.
+// Only .about-content and .about-images need JS-driven IntersectionObserver.
 function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll(
-        '.expertise-card, .project-card, .testimonial-card, .about-content, .about-images'
-    );
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
 
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    const animatedElements = document.querySelectorAll('.about-content, .about-images');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -295,14 +287,9 @@ function initScrollAnimations() {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
+    animatedElements.forEach(el => observer.observe(el));
 }
 
 // Tech badges hover pause
