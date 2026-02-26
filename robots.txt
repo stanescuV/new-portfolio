@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Currently looking for an internship Full Stack Developer / Data Science 
+# Or Junior Full Stack Developer position
+# :D 
